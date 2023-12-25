@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Laravel\Sanctum\PersonalAccessToken;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,14 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+require_once __DIR__ . '/web_parts/teachers.php';
+require_once __DIR__ . '/web_parts/events.php';
+require_once __DIR__ . '/web_parts/users.php';
 
 Route::get('/', function () {
     return view('start');
 })->name('start');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
-
+Route::get('/login/token:{hashedTooken}',function($hashedTooken){
+    $token = PersonalAccessToken::findToken($hashedTooken);
+    $user = $token->tokenable;
+    Auth::loginUsingId($user->id);
+    return redirect('/home');
+});
 
 Auth::routes([
     'register' => false,
