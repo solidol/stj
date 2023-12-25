@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('start');
+})->name('start');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
+
+
+
+Auth::routes([
+    'register' => false,
+    // Registration Routes...
+    'reset' => false,
+    // Password Reset Routes...
+    'verify' => false,
+    // Email Verification Routes...
+]);
+

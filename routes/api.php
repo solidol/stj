@@ -1,7 +1,13 @@
 <?php
 
+use App\Http\Controllers\HelperController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\LessonController;
+use App\Http\Controllers\PresentController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\CheckerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +20,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
+
+
+
+
+
+
+
