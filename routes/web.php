@@ -15,8 +15,13 @@ use Laravel\Sanctum\PersonalAccessToken;
 */
 
 require_once __DIR__ . '/web_parts/teachers.php';
+require_once __DIR__ . '/web_parts/lessons.php';
+require_once __DIR__ . '/web_parts/marks.php';
+require_once __DIR__ . '/web_parts/absents.php';
+require_once __DIR__ . '/web_parts/journals.php';
 require_once __DIR__ . '/web_parts/events.php';
 require_once __DIR__ . '/web_parts/users.php';
+require_once __DIR__ . '/web_parts/mdb.php';
 
 Route::get('/', function () {
     return view('start');

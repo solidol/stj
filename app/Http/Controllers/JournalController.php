@@ -16,31 +16,32 @@ use DateTime;
 
 class JournalController extends Controller
 {
-    function index($group = false)
+    function index()
     {
         $user = Auth::user();
-        $groups = DB::table('grups')->orderBy('nomer_grup')->get();
-        $subjects = DB::table('subjects')->orderBy('subject_name')->get();
-        if (!$group) {
-            $journals = $user->userable->journals()->with('group')->get()->sortBy('group.title');
-        } else {
-            $journals = $user->userable->journals()->where('group_id', $group)->with('group')->get()->sortBy('group.title');
-        }
+        $journals = $user->userable->group->journals;
+        /*
         $messages = Message::where('to_id', 0)
             ->where('message_type', 'text')
             ->whereDate('datetime_end', '>', (new DateTime())->format('Y-m-d h:m:s'))
             ->whereDate('datetime_start', '<', (new DateTime())->format('Y-m-d h:m:s'))
             ->get();
-
+*/
+        $messages = [];
         return view('journals.index', [
-            'messages' => $messages,
-            'data' => array('prep' => $user->userable_id),
             'journals' => $journals,
-            'grList' => $groups,
-            'sbjList' => $subjects,
         ]);
     }
 
+    function show(Journal $journal)
+    {
+        $user = Auth::user();
+        $journals = $user->userable->group->journals;
+        return view('journals.show', [
+            'currentJournal' => $journal,
+            'journals' => $journals
+        ]);
+    }
     function studentMarks($id = false)
     {
         if ($id) {
