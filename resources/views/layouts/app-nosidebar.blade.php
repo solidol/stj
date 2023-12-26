@@ -21,6 +21,8 @@
 
 <body>
     @include('layouts.preloader')
+    <div class="hfill d-md-block d-none">
+    </div>
     <div id="app">
 
         @include('menus.mainmenu')

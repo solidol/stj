@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }} - @yield('title')</title>
 
 
-    
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -22,30 +22,30 @@
 
 <body>
     @include('layouts.preloader')
-
+    <div class="hfill d-md-block d-none">
+    </div>
     <div id="app">
         @include('menus.mainmenu')
         <div class="container-fluid">
 
             @if (Auth::user())
-
-            <div class="row">
-                <div class="col-lg-3 col-md-5 col-sm-12 col-xs-12">
-                    <aside>
-                        @yield('sidebar')
-                    </aside>
+                <div class="row">
+                    <div class="col-lg-3 col-md-5 col-sm-12 col-xs-12">
+                        <aside>
+                            @yield('sidebar')
+                        </aside>
+                    </div>
+                    <div class="col-lg-9 col-md-7 col-sm-12 col-xs-12">
+                        <main class="baloon">
+                            @yield('content')
+                        </main>
+                    </div>
                 </div>
-                <div class="col-lg-9 col-md-7 col-sm-12 col-xs-12">
-                    <main class="baloon">
-                        @yield('content')
-                    </main>
-                </div>
-            </div>
             @else
-            <main>
+                <main>
 
-                @yield('content')
-            </main>
+                    @yield('content')
+                </main>
             @endif
         </div>
     </div>

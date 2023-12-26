@@ -12,3 +12,16 @@
 .start-1 {
     left: 1rem;
 }
+
+.card {
+    background-color: rgba($white, 0);
+}
+
+
+.teacher-card{
+    border-radius: 1.5rem;
+    background-color: $light-blue;
+    margin: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}

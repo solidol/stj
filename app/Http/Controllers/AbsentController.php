@@ -81,11 +81,11 @@ class AbsentController extends Controller
 
         $journals = $user->userable->group->journals()->with('subject')->get()->sortBy('subject.subject_name');
         return view(
-            'student.timesheets.index',
+            'timesheets.index',
             [
                 'user' => $user,
-                'data' => [
-                    'title1' => 'Пропуски за ' . AbsentController::$mothStrings[$month] . ' ' . $year . 'p.',
+                'data' => (object)[
+                    'title' => 'Пропуски за ' . AbsentController::$mothStrings[$month] . ' ' . $year . 'p.',
                     'last_mon' => (new DateTime($year . '-' . $month . '-01'))->modify('last month')->format('m'),
                     'next_mon' => (new DateTime($year . '-' . $month . '-01'))->modify('next month')->format('m'),
                 ],

@@ -1,0 +1,51 @@
+h1,
+h2,
+h3,
+h4 {
+    color: $dark-blue;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    //background-color: $light-blue;
+    font-size: 2rem;
+    padding: 1rem;
+    border-bottom: 3px solid $dark-blue;
+}
+
+h2 {
+    //background-color: $light-blue;
+    font-size: 1.7rem;
+    padding: 0.5rem;
+    //border-bottom: 3px solid $dark-blue;
+}
+
+h3 {
+
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+h6 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+img.avatar {
+    border-radius: 25%;
+    max-width: 10rem;
+    width: 75%;
+}
+
+.name-3 {
+    font-weight: 600;
+    color: $dark-blue;
+}

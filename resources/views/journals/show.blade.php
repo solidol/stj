@@ -34,20 +34,20 @@
 
 
 @section('content')
-    <h1>Журнал з дисципліни {{ $currentJournal->subject->subject_name }}</h1>
+    <h1>{{ $currentJournal->subject->subject_name }}</h1>
     <div class="row m-3">
         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">
-            <img class="w-75" src="{{ route('teacher.avatar.get', ['id' => $currentJournal->teacher->id]) }}">
+            <img class="avatar mx-auto d-block"
+                src="{{ route('teacher.avatar.get', ['id' => $currentJournal->teacher->id]) }}">
         </div>
-        <div class="col-xl-10 col-lg-9 col-md-8 col-sm-6 col-xs-12">
-            <p class="fs-3">Викладач - {{ $currentJournal->teacher->fullname }}</p>
-            <ul>
-                <li>
-                    Н/А, н/а, НА, на - неатестований
-                </li>
-                <li>
-                    Зар, зар, З, з - зараховано
-                </li>
+        <div class="col-xl-10 col-lg-9 col-md-8 col-sm-6 col-xs-12 text-center">
+            <p class="fs-3 name-3 mx-auto d-block">{{ $currentJournal->teacher->fullname }}</p>
+            <p>
+                Н/А, н/а, НА, на - неатестований
+            </p>
+            <p>
+                Зар, зар, З, з - зараховано
+            </p>
             </ul>
         </div>
     </div>

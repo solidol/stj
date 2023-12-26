@@ -18,6 +18,17 @@
 
                         @if (Auth::user())
                             <p class="fs-2">Вітаємо, {{ Auth::user()->userable->fullname }}!</p>
+                            <p>
+                                <a class="btn" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                                    <i class="bi bi-box-arrow-right"></i> Вихід
+                                </a>
+                            </p>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                         @else
                             <p class="fs-2">Тільки для авторизованих користувачів!</p>
                             <p class="fs-3">Для перегляду довідки авторизуйтеся за допомогою облікових даних електронного
