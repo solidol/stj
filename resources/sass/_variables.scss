@@ -6,22 +6,32 @@ $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 // Colors
+$light-blue: #e6f3ff;
 $blue: #1c5791;
 $dark-blue: #12375d;
-$light-blue: #e6f3ff;
 $ultra-dark-blue: #1a2938;
+
+$light-green: #a3cbbe;
+$green: #115744;
+$dark-green: #274136;
+
 $indigo: #6574cd;
 $purple: #9561e2;
 $pink: #f66d9b;
+
+$ligth-red: #CD5C5C;
 $red: #a22226;
-$orange: #f6993f;
+
+$orange: #FF6347;
 $yellow: #ffed4a;
-$green: #11572e;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
 $white: #ffffff;
 $dark-white: #eaefea;
 
+
+
+/*
 
 $primary: $blue;
 $secondary: $orange;
@@ -29,16 +39,29 @@ $success: $green;
 $info: $cyan;
 $warning: $yellow;
 $danger: $red;
-$light: $light-blue;
+$light: $light-green;
 $dark: $blue;
 
+*/
+
+$primary: $blue;
+$secondary: $orange;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $ligth-red;
+$light: $light-green;
+$ultra-light: $dark-white;
+$dark: $dark-green;
+
+
 // Body
-$body-bg: $light-blue;
-$table-bg: rgba($light-blue, 0);
+$body-bg: $light-green;
+$table-bg: rgba($light-green, 0);
 
 $navbar-dark-color: $white ;
-$navbar-dark-hover-color: rgba($light-blue, .75);
-$navbar-dark-active-color: $light-blue;
+$navbar-dark-hover-color: rgba($light, .75);
+$navbar-dark-active-color: $light;
 $navbar-dark-disabled-color: rgba($white, .25);
 $navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 $navbar-dark-toggler-border-color: rgba($white, .1);
@@ -46,10 +69,10 @@ $navbar-dark-brand-color: $navbar-dark-active-color;
 $navbar-dark-brand-hover-color: $navbar-dark-active-color;
 
 
-$accordion-bg: $light-blue;
+$accordion-bg: $light;
 $accordion-border-radius: 10px;
-$accordion-color: $blue;
-$accordion-border-color: $blue;
+$accordion-color: $green;
+$accordion-border-color: $green;
 $accordion-border-width: 3px;
-$accordion-button-focus-border-color: $blue;
-$accordion-button-border-color: $blue;
+$accordion-button-focus-border-color: $green;
+$accordion-button-border-color: $green;

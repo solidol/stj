@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-nosidebar')
 
 @section('content')
     <div class="container">
@@ -6,7 +6,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <h1>Електронний щоденник ХПФК</h1>
+                        Електронний щоденник
                     </div>
 
                     <div class="card-body">

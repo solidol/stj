@@ -26,10 +26,8 @@
     </div>
     <div id="app">
 
-        @include('menus.mainmenu')
-
         <div class="container">
-            <main class="m-1 p-2 bg-transparent rounded-2">
+            <main class="m-1 p-2 bg-transparent">
                 @yield('content')
             </main>
         </div>

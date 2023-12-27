@@ -17,10 +17,19 @@
     background-color: rgba($white, 0);
 }
 
+.card-header {
+    background-color: $dark;
+    color: $light;
+    font-weight: 600;
+}
 
-.teacher-card{
+.card-body {
+    background-color: $ultra-light;
+}
+
+.teacher-card {
     border-radius: 1.5rem;
-    background-color: $light-blue;
+    background-color: $ultra-light;
     margin: 0.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;

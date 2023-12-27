@@ -1,7 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="/assets/img/logo.png"> {{ config('app.name', 'Laravel') }}
+            <img src="/assets/img/logo.png">
+            <span class="ms-1 d-none d-xl-inline">
+                {{ config('app.name', 'Laravel') }}
+            </span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
