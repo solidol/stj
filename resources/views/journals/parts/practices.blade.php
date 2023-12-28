@@ -3,8 +3,10 @@
     <table id="tdpr" class="table table-striped table-bordered m-0">
         <thead>
             <tr>
-                <th>Дата</th>
-                <th>Назва</th>
+                <th>
+                    <div>Дата</div>
+                    <div>Назва</div>
+                </th>
                 <th>Оцінка</th>
                 <th></th>
             </tr>
@@ -14,10 +16,12 @@
                 @if ($control->title)
                     <tr>
                         <td>
-                            {{ $control->date_->format('d.m.Y') ?? 'Дата не вказана' }}
-                        </td>
-                        <td>
-                            {{ $control->title }}
+                            <div>
+                                {{ $control->date_->format('d.m.Y') ?? 'Дата не вказана' }}
+                            </div>
+                            <div>
+                                {{ $control->title }}
+                            </div>
                         </td>
                         <td>
                             <b
