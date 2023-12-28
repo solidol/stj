@@ -34,14 +34,16 @@ class UserController extends Controller
                 return DataTables::of($users)
                     ->addIndexColumn()
                     ->addColumn('fullname', function ($user) {
-                        return $user->userable->fullname;
+                        $content = '<div>' . $user->userable->fullname . '</div>';
+                        $content .= '<div>' . $user->email . '</div>';
+                        return $content;
                     })
                     ->addColumn('action', function ($user) {
-                        $actionBtn = '<a href="' . route('users.loginas', ['user' => $user]) . '" class="btn btn-success btn-login" data-uid="' . $user->id . '">Увійти</a>';
+                        $actionBtn = '<a href="' . route('users.loginas', ['user' => $user]) . '" class="btn btn-primary">Увійти</a>';
                         return $actionBtn;
                     })
 
-                    ->rawColumns(['action'])
+                    ->rawColumns(['action','fullname'])
                     ->make(true);
             }
             return view('users.index', ['slug' => $slug]);

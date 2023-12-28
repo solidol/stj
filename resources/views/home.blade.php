@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Мій профіль</h1>
-    <div class="card-body">
+    <div class="baloon">
         @if (session('status'))
             <div class="alert alert-success" role="alert">
                 {{ session('status') }}
@@ -23,6 +23,5 @@
                 @csrf
             </form>
         @endif
-    </div>
     </div>
 @endsection

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top d-md-block d-none">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img src="/assets/img/logo.png">
@@ -64,6 +64,66 @@
                         </li>
                     </ul>
                 </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<nav class="navbar navbar-light bg-danger fixed-bottom d-md-none">
+    <div class="container-fluid justify-content-center">
+        <div class="expand navbar-expand" id="navbarBottom">
+
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('users.index', ['slug' => 'teachers']) }}">
+                        <i class="bi bi-people fs-4"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('users.index', ['slug' => 'students']) }}">
+                        <i class="bi bi-people-fill fs-4"></i>
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('events.index') }}">
+                        <i class="bi bi-list-columns-reverse fs-4"></i>
+                    </a>
+                </li>
+
+
+                <li class="nav-item dropup">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="bi bi-person-bounding-box"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="{{ route('my.profile') }}"><i
+                                    class="bi bi-person-lines-fill"></i> Мій профіль</a>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+    document.getElementById('logout-form').submit();">
+                                <i class="bi bi-box-arrow-right"></i> Вихід
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+
             </ul>
         </div>
     </div>

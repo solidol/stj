@@ -28,7 +28,7 @@
         @include('menus.mainmenu')
 
         <div class="container">
-            <main class="m-1 p-2">
+            <main>
                 @yield('content')
             </main>
         </div>
