@@ -35,22 +35,6 @@
                                 Відкрити
                             </span>
                         </a>
-
-                        <a class="btn py-0 d-md-inline-block d-none"
-                            href="{{ URL::route('lessons.index', ['journal' => $journal]) }}">
-                            <i class="bi bi-pencil-square fs-3"></i>
-                            <span class="ms-1 d-none d-sm-inline">
-                                Пари
-                            </span>
-                        </a>
-                        <a class="btn py-0 d-md-inline-block d-none"
-                            href="{{ URL::route('journals.show', ['journal' => $journal]) }}">
-                            <i class="bi bi-5-square fs-3"></i>
-                            <span class="ms-1 d-none d-sm-inline">
-                                Оцінки
-                            </span>
-                        </a>
-
                     </td>
                 </tr>
             @endforeach
