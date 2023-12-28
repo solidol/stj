@@ -88,33 +88,34 @@
 
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('journals.index') }}">
-                        <i class="bi bi-book fs-2"></i>
+                        <i class="bi bi-book fs-4"></i>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('teachers.index') }}">
-                        <i class="bi bi-people fs-2"></i>
+                        <i class="bi bi-people fs-4"></i>
                     </a>
                 </li>
 
-                <li class="nav-item navbar-brand">
-                    <a class="nav-link" href="{{ url('/') }}">
-                        <img src="/assets/img/logo.png">
-                    </a>
-                </li>
 
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('absents.index') }}">
-                        <i class="bi bi-person-slash fs-2"></i>
+                        <i class="bi bi-person-slash fs-4"></i>
                     </a>
                 </li>
 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('mdb.index') }}"><i class="bi bi-database fs-2"></i></a>
+                    <a class="nav-link" href="{{ route('mdb.index') }}">
+                        <i class="bi bi-database fs-4"></i>
+                    </a>
                 </li>
 
-
+                <li class="nav-item ">
+                    <a class="nav-link" href="{{ url('/') }}">
+                        <i class="bi bi-person fs-4"></i>
+                    </a>
+                </li>
 
             </ul>
         </div>

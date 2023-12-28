@@ -10,9 +10,8 @@
         Мої викладачі
     </h1>
 
-    <div class="mb-3 mt-1 table-responsive">
+    <div class="container-fluid">
 
-        <div class="container">
             @foreach ($teachers as $teacher)
                 <div class="row teacher-card">
                     <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">
@@ -34,7 +33,6 @@
                     </div>
                 </div>
             @endforeach
-        </div>
 
     </div>
 

@@ -6,14 +6,14 @@ $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 // Colors
-$light-blue: #e6f3ff;
+$light-blue: #b3ecff;
 $blue: #1c5791;
 $dark-blue: #12375d;
 $ultra-dark-blue: #1a2938;
 
-$light-green: #a3cbbe;
-$green: #115744;
-$dark-green: #274136;
+$light-green: #02ffff;
+$green: #009999;
+$dark-green: #003333;
 
 $indigo: #6574cd;
 $purple: #9561e2;
@@ -27,11 +27,11 @@ $yellow: #ffed4a;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
 $white: #ffffff;
-$dark-white: #eaefea;
+$dark-white: #f2f9f2;
 
 
 
-/*
+
 
 $primary: $blue;
 $secondary: $orange;
@@ -39,11 +39,11 @@ $success: $green;
 $info: $cyan;
 $warning: $yellow;
 $danger: $red;
-$light: $light-green;
+$ultra-light: $dark-white;
+$light: $light-blue;
 $dark: $blue;
 
-*/
-
+/*
 $primary: $blue;
 $secondary: $orange;
 $success: $green;
@@ -53,11 +53,11 @@ $danger: $ligth-red;
 $light: $light-green;
 $ultra-light: $dark-white;
 $dark: $dark-green;
-
+*/
 
 // Body
-$body-bg: $light-green;
-$table-bg: rgba($light-green, 0);
+$body-bg: $light;
+$table-bg: rgba($light, 0);
 
 $navbar-dark-color: $white ;
 $navbar-dark-hover-color: rgba($light, .75);

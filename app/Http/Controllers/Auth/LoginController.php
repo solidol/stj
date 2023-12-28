@@ -56,29 +56,17 @@ class LoginController extends Controller
             'password' => $request->password
         ];
         if (Auth::attempt($credentials)) {
-            if (\request()->ajax()) {
-                $toJson = Auth::user()->getShortObj();
-                Log::apiLogin();
-                $token = $request->user()->createToken('auth-token')->plainTextToken;
-                return response()->json(['token' => $token, 'user' => $toJson]);
-            } else {
-                Log::login();
-                return redirect()->intended($this->redirectTo);
-            }
+            Log::login();
+            return redirect()->intended();
+
         }
-        if (\request()->ajax()) {
-            $err = ['status' => '401'];
-            return response()->json($err, 401);
-        } else {
-            return redirect()->back()
-                ->withInput()
-                ->withErrors([
-                    'login' => 'Ваш обліковий запис не знайдено в системі'
-                ]);
-        }
+        return redirect()->back()
+            ->withInput()
+            ->withErrors([
+                'login' => 'Ваш обліковий запис не знайдено в системі'
+            ]);
 
     }
-
 
     protected function checkLoginInput()
     {

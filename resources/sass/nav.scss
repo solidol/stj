@@ -1,6 +1,6 @@
 /* navbar */
 
-.navbar-light .nav-link{
+.navbar-light .nav-link {
     --bs-nav-link-color: $dark;
 }
 
@@ -16,7 +16,7 @@
     border-radius: 5px;
 }
 
-.navbar-light{
+.navbar-light {
     color: $dark;
 }
 
@@ -37,17 +37,28 @@
     min-height: 450px;
 }
 
-a.nav-link{
+a.nav-link {
     display: block;
     padding: 0.3rem;
 }
 
-.nav-item a.active{
+.nav-item a.active {
     font-weight: 600;
-//    padding-left: 0.7rem;
+
 }
 
-.nav-item a.active::before{
+.nav-item a.active::before {
     content: "- ";
+}
+
+nav.fixed-bottom li {
+    background-color: $light;
+    border-radius: 0.3rem;
+    border: 1px solid $dark;
+}
+
+nav.fixed-bottom li a{
+    padding: 0.1rem;
+    font-weight: 600;
 }
 

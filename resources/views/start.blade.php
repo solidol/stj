@@ -1,12 +1,14 @@
-@extends('layouts.app-simple')
+@extends('layouts.app-nosidebar')
 
 @section('content')
+    <div class="hfill d-md-block d-none">
+    </div>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        Електронний щоденник
+                        Електронний щоденник 1
                     </div>
 
                     <div class="card-body">

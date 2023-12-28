@@ -14,21 +14,29 @@ use Laravel\Sanctum\PersonalAccessToken;
 |
 */
 
-require_once __DIR__ . '/web_parts/teachers.php';
-require_once __DIR__ . '/web_parts/lessons.php';
-require_once __DIR__ . '/web_parts/marks.php';
-require_once __DIR__ . '/web_parts/absents.php';
-require_once __DIR__ . '/web_parts/journals.php';
-require_once __DIR__ . '/web_parts/events.php';
-require_once __DIR__ . '/web_parts/users.php';
-require_once __DIR__ . '/web_parts/mdb.php';
 
 Route::get('/', function () {
-    return view('start');
+    if (Auth::user())
+        return redirect()->route('home');
+    else
+        return view('start');
 })->name('start');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
-Route::get('/login/token:{hashedTooken}',function($hashedTooken){
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
+    require_once __DIR__ . '/web_parts/teachers.php';
+    require_once __DIR__ . '/web_parts/lessons.php';
+    require_once __DIR__ . '/web_parts/marks.php';
+    require_once __DIR__ . '/web_parts/absents.php';
+    require_once __DIR__ . '/web_parts/journals.php';
+    require_once __DIR__ . '/web_parts/events.php';
+    require_once __DIR__ . '/web_parts/users.php';
+    require_once __DIR__ . '/web_parts/mdb.php';
+});
+
+
+Route::get('/login/token:{hashedTooken}', function ($hashedTooken) {
     $token = PersonalAccessToken::findToken($hashedTooken);
     $user = $token->tokenable;
     Auth::loginUsingId($user->id);

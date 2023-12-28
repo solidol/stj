@@ -56,6 +56,14 @@ return [
             'throw' => false,
         ],
 
+        'mdb' => [
+            'driver' => 'local',
+            'root' => env('METHOD_DB'),
+            'url' => env('APP_URL').'/mdb',
+            'visibility' => false,
+            'throw' => false,
+        ],
+
     ],
 
     /*

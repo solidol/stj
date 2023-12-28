@@ -132,11 +132,11 @@
                 language: languageUk,
                 buttons: [{
                         extend: 'copy',
-                        className: 'btn btn-success'
+                        className: 'btn btn-primary text-white'
                     },
                     {
                         extend: 'excel',
-                        className: 'btn btn-success'
+                        className: 'btn btn-primary text-white'
                     }
                 ],
                 "paging": false,
