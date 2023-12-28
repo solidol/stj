@@ -26,31 +26,21 @@
     </div>
     <div id="app">
         @include('menus.mainmenu')
-        <div class="container-fluid">
-
-            @if (Auth::user())
-                <div class="row">
-                    <div class="col-lg-3 col-md-5 col-sm-12 col-xs-12">
-                        <aside class="m-1 p-2">
-                            @yield('sidebar')
-                        </aside>
-                    </div>
-                    <div class="col-lg-9 col-md-7 col-sm-12 col-xs-12">
-                        <main class="m-1 p-2">
-                            @yield('content')
-                        </main>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-5 col-sm-12">
+                    <aside class="p-0">
+                        @yield('sidebar')
+                    </aside>
                 </div>
-            @else
-                <main>
-
-                    @yield('content')
-                </main>
-            @endif
+                <div class="col-lg-9 col-md-7 col-sm-12">
+                    <main class="p-0">
+                        @yield('content')
+                    </main>
+                </div>
+            </div>
         </div>
     </div>
-    @include('popups.popup-messages')
-
 </body>
 
 </html>

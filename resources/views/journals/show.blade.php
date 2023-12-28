@@ -46,9 +46,8 @@
                 <p class="fs-3 name-3 mx-auto d-block">{{ $currentJournal->teacher->fullname }}</p>
             </div>
         </div>
+        
         <div>
-
-
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
@@ -89,8 +88,6 @@
                     Проведені пари
                 </div>
             </div>
-
-
         </div>
     </div>
 

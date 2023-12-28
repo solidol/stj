@@ -1,5 +1,5 @@
 <h3>Контролі</h3>
-<table id="tdctrl" class="table table-striped table-bordered">
+<table class="table table-striped">
     <thead>
         <tr>
             <th>
@@ -22,9 +22,12 @@
                         </div>
                     </td>
                     <td>
-                        <b
-                            class="mark-in-list">{{ $control->mark(Auth::user()->userable_id)->mark_str ?? '-' }}</b><span>з
-                            {{ $control->max_grade }} б.</span>
+                        <b class="mark-in-list">
+                            {{ $control->mark(Auth::user()->userable_id)->mark_str ?? '-' }}
+                        </b>
+                        <span>
+                            з {{ $control->max_grade }} б.
+                        </span>
                     </td>
                 </tr>
             @endif

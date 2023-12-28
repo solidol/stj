@@ -1,6 +1,6 @@
 <h3>Лабораторні</h3>
 @if ($currentJournal->hasPractices())
-    <table id="tdpr" class="table table-striped table-bordered m-0">
+    <table class="table table-bordered">
         <thead>
             <tr>
                 <th>
@@ -24,13 +24,17 @@
                             </div>
                         </td>
                         <td>
-                            <b
-                                class="mark-in-list">{{ $control->mark(Auth::user()->userable_id)->mark_str ?? '-' }}</b><span>з
-                                {{ $control->max_grade_str }}.</span>
+                            <b class="mark-in-list">
+                                {{ $control->mark(Auth::user()->userable_id)->mark_str ?? '-' }}
+                            </b>
+                            <span>з {{ $control->max_grade_str }}.
+                            </span>
                         </td>
                         <td>
                             <a href="{{ URL::route('practices.show', ['practice' => $control]) }}"
-                                class="btn btn-success"><i class="bi bi-exclamation-triangle"></i></a>
+                                class="btn btn-success">
+                                <i class="bi bi-exclamation-triangle"></i>
+                            </a>
                         </td>
                     </tr>
                 @endif
