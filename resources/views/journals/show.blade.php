@@ -35,22 +35,63 @@
 
 @section('content')
     <h1>{{ $currentJournal->subject->subject_name }}</h1>
-    <div class="row m-3">
-        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">
-            <img class="avatar mx-auto d-block"
-                src="{{ route('teacher.avatar.get', ['id' => $currentJournal->teacher->id]) }}">
+    <div class="baloon">
+        <div class="row m-3">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <img class="avatar mx-auto d-block"
+                    src="{{ route('teacher.avatar.get', ['id' => $currentJournal->teacher->id]) }}">
+            </div>
+            <div class="col-xl-10 col-lg-9 col-md-8 col-sm-6 col-xs-12 text-center">
+                <p class="fs-4 name-3 mx-auto d-block">Викладач</p>
+                <p class="fs-3 name-3 mx-auto d-block">{{ $currentJournal->teacher->fullname }}</p>
+            </div>
         </div>
-        <div class="col-xl-10 col-lg-9 col-md-8 col-sm-6 col-xs-12 text-center">
-            <p class="fs-3 name-3 mx-auto d-block">{{ $currentJournal->teacher->fullname }}</p>
-            <p>
-                Н/А, н/а, НА, на - неатестований
-            </p>
-            <p>
-                Зар, зар, З, з - зараховано
-            </p>
+        <div>
+
+
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                        type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                        Оцінки
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                        type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                        Лабораторні
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                        type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+                        Пари
+                    </button>
+                </li>
             </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <p>
+                        Н/А - неатестований
+                    </p>
+                    <p>
+                        Зар - зараховано
+                    </p>
+                    @include('journals.parts.controls')
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <p>
+                        Зар - зараховано
+                    </p>
+                    @include('journals.parts.practices')
+                </div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    Проведені пари
+                </div>
+            </div>
+
+
         </div>
     </div>
-
 
 @stop

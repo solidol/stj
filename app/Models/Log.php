@@ -12,8 +12,9 @@ class Log extends Model
     use HasFactory;
     //public $fillable = ['user_id', 'event', 'comment'];
     protected $guarded = [];
-
-    protected $dates = ['created_at'];
+    protected $casts = [
+        'created_at' => 'datetime'
+    ];
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');

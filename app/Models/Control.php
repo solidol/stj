@@ -12,8 +12,10 @@ class Control extends Model
     use HasFactory;
     public $timestamps = false;
     protected $guarded = [];
-    protected $appendds = ['type_title'];
-    protected $dates = ['date_', 'date_formatted'];
+    protected $appends = ['type_title'];
+    protected $casts = [
+        'date_' => 'datetime'
+    ];
 
     protected static function boot ()
     {
@@ -22,27 +24,18 @@ class Control extends Model
             $builder->where('type_', 0)->orWhere('type_', 1)->orWhere('type_', 2)->orWhere('type_', 13);
         });
     }
-
     public function getTypeTitleAttribute()
     {
         switch ($this->type_) {
             case 0:
                 return "Поточний";
-                break;
             case 1:
                 return "Модульний";
-                break;
             case 2:
                 return "Підсумковий";
-                break;
             default:
                 return "-";
-                break;
         }
-    }
-    public function getDateFormattedAttribute()
-    {
-        return $this->date_?$this->date_->format('d.m.Y'):'Відсутня дата';
     }
     public function marks()
     {

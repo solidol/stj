@@ -31,12 +31,12 @@
             @if (Auth::user())
                 <div class="row">
                     <div class="col-lg-3 col-md-5 col-sm-12 col-xs-12">
-                        <aside>
+                        <aside class="m-1 p-2">
                             @yield('sidebar')
                         </aside>
                     </div>
                     <div class="col-lg-9 col-md-7 col-sm-12 col-xs-12">
-                        <main class="baloon">
+                        <main class="m-1 p-2">
                             @yield('content')
                         </main>
                     </div>

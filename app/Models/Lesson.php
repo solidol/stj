@@ -14,7 +14,7 @@ class Lesson extends Model
 {
     protected $table = 'lessons_';
     protected $dates = ['data_'];
-    protected $appends = ['id', 'date_formatted', 'student_url'];
+    protected $appends = ['id', 'student_url'];
     public $timestamps = false;
     protected $primaryKey = 'kod_pari';
     protected $guarded = [];
@@ -23,10 +23,6 @@ class Lesson extends Model
     public function getIdAttribute()
     {
         return $this->kod_pari;
-    }
-    public function getDateFormattedAttribute()
-    {
-        return $this->data_->format('d.m.Y');
     }
     public function getStudentUrlAttribute()
     {

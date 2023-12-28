@@ -13,8 +13,10 @@ class Practice extends Model
     protected $table = 'controls';
     public $timestamps = false;
     protected $guarded = [];
-    protected $appendds = ['type_title'];
-    protected $dates = ['date_', 'date_formatted', 'max_grade_str'];
+    protected $appendds = ['type_title','max_grade_str'];
+    protected $casts = [
+        'date_' => 'datetime'
+    ];
     protected static function boot()
     {
         parent::boot();
@@ -62,10 +64,7 @@ class Practice extends Model
                 break;
         }
     }
-    public function getDateFormattedAttribute()
-    {
-        return $this->date_ ? $this->date_->format('d.m.Y') : 'Відсутня дата';
-    }
+
     public function marks()
     {
         return $this->hasMany(Mark::class, 'control_id')->where('kod_stud', '>', 0)->orderBy('data_');
