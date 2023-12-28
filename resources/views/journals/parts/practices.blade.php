@@ -29,7 +29,7 @@
                                 {{ $control->max_grade_str }}.</span>
                         </td>
                         <td>
-                            <a href="{{ URL::route('student.practices.show', ['practice' => $control]) }}"
+                            <a href="{{ URL::route('practices.show', ['practice' => $control]) }}"
                                 class="btn btn-success"><i class="bi bi-exclamation-triangle"></i></a>
                         </td>
                     </tr>
