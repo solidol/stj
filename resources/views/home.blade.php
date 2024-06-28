@@ -8,7 +8,9 @@
                 {{ session('status') }}
             </div>
         @endif
-
+        <?php
+        dd(Auth::user());
+        ?>
         @if (Auth::user())
             <p class="fs-2">Вітаємо, {{ Auth::user()->userable->fullname }}!</p>
             <p>
@@ -18,9 +20,7 @@
                     <i class="bi bi-box-arrow-right"></i> Вихід
                 </a>
             </p>
-            <?php
-            dd(Auth::user());
-            ?>
+
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
             </form>
