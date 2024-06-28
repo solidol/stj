@@ -8,9 +8,7 @@
                 {{ session('status') }}
             </div>
         @endif
-        <?php
-        dd(Auth::user());
-        ?>
+
         @if (Auth::user())
             <p class="fs-2">Вітаємо, {{ Auth::user()->userable->fullname }}!</p>
             <p>
