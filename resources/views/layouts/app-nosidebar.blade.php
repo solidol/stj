@@ -27,11 +27,10 @@
 
         @include('menus.mainmenu')
 
-        <div class="container">
-            <main>
-                @yield('content')
-            </main>
-        </div>
+        <main class="container">
+            @yield('content')
+        </main>
+
     </div>
     @include('popups.popup-messages')
 </body>

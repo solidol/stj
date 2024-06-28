@@ -37,11 +37,11 @@
     <h1>{{ $currentJournal->subject->subject_name }}</h1>
     <div class="baloon">
         <div class="row m-3">
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="col-12 col-md-4 p-2">
                 <img class="avatar mx-auto d-block"
                     src="{{ route('teacher.avatar.get', ['id' => $currentJournal->teacher->id]) }}">
             </div>
-            <div class="col-xl-10 col-lg-9 col-md-8 col-sm-6 col-xs-12 text-center">
+            <div class="col-12 col-md-8 p-2 text-center">
                 <p class="fs-4 name-3 mx-auto d-block">Викладач</p>
                 <p class="fs-3 name-3 mx-auto d-block">{{ $currentJournal->teacher->fullname }}</p>
             </div>

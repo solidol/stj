@@ -7,7 +7,7 @@ $line-height-base: 1.6;
 
 // Colors
 $light-blue: #b3ecff;
-$blue: #1c5791;
+$blue: #000648;
 $dark-blue: #12375d;
 $ultra-dark-blue: #1a2938;
 
@@ -40,23 +40,11 @@ $info: $cyan;
 $warning: $yellow;
 $danger: $red;
 $ultra-light: $dark-white;
-$light: $light-blue;
+$light: $white;
 $dark: $blue;
 
-/*
-$primary: $blue;
-$secondary: $orange;
-$success: $green;
-$info: $cyan;
-$warning: $yellow;
-$danger: $ligth-red;
-$light: $light-green;
-$ultra-light: $dark-white;
-$dark: $dark-green;
-*/
-
 // Body
-$body-bg: $light;
+$body-bg: $dark;
 $table-bg: rgba($light, 0);
 
 $navbar-dark-color: $white ;

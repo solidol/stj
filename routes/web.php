@@ -15,15 +15,11 @@ use Laravel\Sanctum\PersonalAccessToken;
 */
 
 
-Route::get('/', function () {
-    if (Auth::user())
-        return redirect()->route('home');
-    else
-        return view('start');
-})->name('start');
+
 
 
 Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'home'])->name('start');
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
     require_once __DIR__ . '/web_parts/teachers.php';
     require_once __DIR__ . '/web_parts/lessons.php';
