@@ -50,8 +50,8 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a class="dropdown-item" href="{{ route('my.profile') }}"><i
-                                    class="bi bi-person-lines-fill"></i> Мій профіль</a>
+                            <a class="dropdown-item" href="/"><i class="bi bi-person-lines-fill"></i> Мій
+                                профіль</a>
                         </li>
 
                         <li>
