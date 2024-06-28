@@ -18,7 +18,9 @@
                     <i class="bi bi-box-arrow-right"></i> Вихід
                 </a>
             </p>
-
+            <?php
+            dd(Auth::user());
+            ?>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
             </form>
