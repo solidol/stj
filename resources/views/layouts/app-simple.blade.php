@@ -27,7 +27,7 @@
     <div id="app">
 
 
-        <main class="px-1 bg-transparent">
+        <main class="px-4 bg-transparent">
             @yield('content')
         </main>
 
