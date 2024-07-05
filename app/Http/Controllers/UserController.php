@@ -66,7 +66,7 @@ class UserController extends Controller
             $toJson = $user->getShortObj();
             return response()->json(['user' => $toJson]);
         }
-        return view('auth.profile', ['user' => $user]);
+        return view('users.show_student', ['user' => $user]);
     }
 
     function loginAs(User $user)

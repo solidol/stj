@@ -31,16 +31,12 @@ class Practice extends Model
             switch ($this->max_grade) {
                 case -1:
                     return "Н/А";
-                    break;
                 case -2:
                     return "Зар";
-                    break;
                 case null:
                     return null;
-                    break;
                 default:
                     return '';
-                    break;
             }
         }
     }
@@ -49,19 +45,14 @@ class Practice extends Model
         switch ($this->type_) {
             case 11:
                 return "Лабораторна робота";
-                break;
             case 12:
                 return "Практична робота";
-                break;
             case 13:
                 return "Лабораторні підсумок";
-                break;
             case 14:
                 return "Практичні підсумок";
-                break;
             default:
                 return "-";
-                break;
         }
     }
 
@@ -85,9 +76,6 @@ class Practice extends Model
     {
         return $this->belongsTo(Lesson::class,'lesson_id','kod_pari');
     }
-    public function additionals()
-    {
-        return $this->morphMany(Additional::class, 'additionable');
-    }
+
     
 }

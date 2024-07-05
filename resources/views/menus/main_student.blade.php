@@ -50,8 +50,10 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a class="dropdown-item" href="/"><i class="bi bi-person-lines-fill"></i> Мій
-                                профіль</a>
+                            <a class="dropdown-item" href="{{ route('users.profile.my') }}">
+                                <i class="bi bi-person-lines-fill"></i>
+                                Мій профіль
+                            </a>
                         </li>
 
                         <li>
@@ -112,7 +114,7 @@
                 </li>
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ url('/') }}">
+                    <a class="nav-link" href="{{ route('users.profile.my') }}">
                         <i class="bi bi-person fs-3"></i>
                     </a>
                 </li>
