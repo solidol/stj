@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="col-12 col-md-4 p-2">
                             <img class="avatar mx-auto d-block"
-                                src="{{ route('teacher.avatar.get', ['id' => $teacher->id]) }}">
+                                src="{{ config('app.api') }}/teachers/{{ $teacher->id }}/avatar">
                         </div>
                         <div class="col-12 col-md-8 p-2">
                             <h2 class="text-center name-3">{{ $teacher->fullname }}</h2>

@@ -57,6 +57,8 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
+    'api' => env('APP_API', 'https://api.college.ks.ua/api'),
+
     'asset_url' => env('ASSET_URL'),
 
     /*
