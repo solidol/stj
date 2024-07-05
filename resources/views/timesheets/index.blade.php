@@ -81,7 +81,7 @@
                         @foreach ($arDates as $dItem)
                             <th class="rotated-text sum">
 
-                                {{ $dItem['raw']->format('d.m.y') }}
+                                {{ $dItem->raw->format('d.m.y') }}
 
                             </th>
                         @endforeach
@@ -94,7 +94,6 @@
                     @foreach ($journals as $journal)
                         @if ($journal->lessonsDate($dateFrom->format('Y-m-d'), $dateTo->format('Y-m-d'))->count() > 0)
                             <tr>
-
                                 <td class="subj-name">
                                     <div>
                                         {{ $journal->subject->subject_name }}
@@ -107,10 +106,11 @@
                                 $cnt = 0;
                                 ?>
                                 @foreach ($arDates as $dItem)
-                                    <td class="hr-cnt {{ $dItem['dw'] == '6' || $dItem['dw'] == '0' ? 'we-cols' : '' }}">
+                                    <td class="hr-cnt {{ $dItem->dw == '6' || $dItem->dw == '0' ? 'we-cols' : '' }}">
 
-                                        @foreach ($journal->lessonsDate($dateFrom->format('Y-m-d'), $dateTo->format('Y-m-d'))->get() as $lesson)
-                                            @if ($lesson->data_ == $dItem['raw'])
+                                        @foreach ($journal->lessonsDate($dateFrom->format('Y-m-d'), $dateTo->format('Y-m-d')) as $lesson)
+
+                                            @if ($lesson->data_ == $dItem->raw)
                                                 <div class="bg-dark text-white">
                                                     @if ($lesson->absent($user->userable->id))
                                                         <?php $cnt++; ?>

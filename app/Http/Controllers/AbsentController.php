@@ -41,6 +41,7 @@ class AbsentController extends Controller
             case '04':
             case '05':
             case '06':
+            case '07':
                 return $date->format('Y') - 1;
 
             case '08':
@@ -73,9 +74,9 @@ class AbsentController extends Controller
 
         $dates = array();
         foreach ($period as $dItem) {
-
-            $tmp['raw'] = $dItem;
-            $tmp['dw'] = $dItem->format('w');
+            $tmp = (object) [];
+            $tmp->raw = $dItem;
+            $tmp->dw = $dItem->format('w');
             $dates[] = $tmp;
         }
 
@@ -84,7 +85,7 @@ class AbsentController extends Controller
             'timesheets.index',
             [
                 'user' => $user,
-                'data' => (object)[
+                'data' => (object) [
                     'title' => 'Пропуски за ' . AbsentController::$mothStrings[$month] . ' ' . $year . 'p.',
                     'last_mon' => (new DateTime($year . '-' . $month . '-01'))->modify('last month')->format('m'),
                     'next_mon' => (new DateTime($year . '-' . $month . '-01'))->modify('next month')->format('m'),

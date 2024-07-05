@@ -26,7 +26,7 @@ class Journal extends Model
     }
     public function lessonsDate($from, $to)
     {
-        return $this->hasMany(Lesson::class)->whereBetween('data_', [$from, $to])->orderBy('data_');
+        return $this->lessons()->get();
     }
     public function group()
     {

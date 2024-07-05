@@ -25,7 +25,7 @@
 
                             @foreach ($teacher->journalsByGroup($group->kod_grup) as $journal)
                                 <div class="m-2">
-                                    <a class="btn btn-primary" href="{{ route('journals.show', ['journal' => $journal]) }}">
+                                    <a class="btn btn-primary d-block" href="{{ route('journals.show', ['journal' => $journal]) }}">
                                         {{ $journal->subject->subject_name }}
                                     </a>
 
