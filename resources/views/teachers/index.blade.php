@@ -22,16 +22,16 @@
                         </div>
                         <div class="col-12 col-md-8 p-2">
                             <h2 class="text-center name-3">{{ $teacher->fullname }}</h2>
-                            <ul class="list-unstyled mx-1">
-                                @foreach ($teacher->journalsByGroup($group->kod_grup) as $journal)
-                                    <li>
-                                        <a class="" href="{{ route('journals.show', ['journal' => $journal]) }}">
-                                            {{ $journal->subject->subject_name }}
-                                        </a>
-                                        </p>
-                                    </li>
-                                @endforeach
-                            </ul>
+
+                            @foreach ($teacher->journalsByGroup($group->kod_grup) as $journal)
+                                <div class="m-2">
+                                    <a class="btn btn-primary" href="{{ route('journals.show', ['journal' => $journal]) }}">
+                                        {{ $journal->subject->subject_name }}
+                                    </a>
+
+                                </div>
+                            @endforeach
+
                         </div>
                     </div>
                 </div>

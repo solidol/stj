@@ -22,15 +22,15 @@
 
 <body>
     @include('layouts.preloader')
-    <div class="hfill d-md-block d-none">
+    <!--<div class="hfill d-md-block d-none">-->
     </div>
     <div id="app">
 
-        <div class="container">
-            <main class="m-1 p-2 bg-transparent">
-                @yield('content')
-            </main>
-        </div>
+
+        <main class="px-1 bg-transparent">
+            @yield('content')
+        </main>
+
     </div>
     @include('popups.popup-messages')
 </body>

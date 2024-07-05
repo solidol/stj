@@ -39,14 +39,14 @@
         <div class="row m-3">
             <div class="col-12 col-md-4 p-2">
                 <img class="avatar mx-auto d-block"
-                    src="{{ route('teacher.avatar.get', ['id' => $currentJournal->teacher->id]) }}">
+                    src="{{ config('app.api') }}/teachers/{{ $currentJournal->teacher->id }}/avatar">
             </div>
             <div class="col-12 col-md-8 p-2 text-center">
                 <p class="fs-4 name-3 mx-auto d-block">Викладач</p>
                 <p class="fs-3 name-3 mx-auto d-block">{{ $currentJournal->teacher->fullname }}</p>
             </div>
         </div>
-        
+
         <div>
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -85,7 +85,7 @@
                     @include('journals.parts.practices')
                 </div>
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                    Проведені пари
+                    @include('journals.parts.lessons')
                 </div>
             </div>
         </div>

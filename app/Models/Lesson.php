@@ -13,7 +13,9 @@ use App\Models\Control;
 class Lesson extends Model
 {
     protected $table = 'lessons_';
-    protected $dates = ['data_'];
+    protected $casts = [
+        'data_' => 'datetime'
+    ];
     protected $appends = ['id', 'student_url'];
     public $timestamps = false;
     protected $primaryKey = 'kod_pari';
