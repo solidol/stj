@@ -1,7 +1,6 @@
 @extends('layouts.app-nosidebar')
-
+@section('title', 'Мій профіль')
 @section('content')
-    <h1>Мій профіль</h1>
     <div class="baloon">
         @if (session('status'))
             <div class="alert alert-success" role="alert">

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Журнал ' . $currentJournal->subject->subject_name)
+@section('title', $currentJournal->subject->subject_name)
 
 
 @section('sidebar')
@@ -34,7 +34,7 @@
 
 
 @section('content')
-    <h1>{{ $currentJournal->subject->subject_name }}</h1>
+
     <div class="baloon">
         <div class="row m-3">
             <div class="col-12 col-md-4 p-2">

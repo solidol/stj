@@ -1,7 +1,6 @@
 @extends('layouts.app-nosidebar')
-
+@section('title', 'Електронний щоденник')
 @section('content')
-    <h1>Електронний щоденник</h1>
     <div class="baloon">
         @if (session('status'))
             <div class="alert alert-success" role="alert">

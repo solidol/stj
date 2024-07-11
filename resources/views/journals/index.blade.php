@@ -4,9 +4,6 @@
 
 
 @section('content')
-    <h1>
-        Мої дисципліни
-    </h1>
     <div class="row">
         @foreach ($journals as $journal)
             <div class="col-12 col-lg-6">

@@ -26,7 +26,13 @@
     </div>
     <div id="app">
 
-
+        <div class="header">
+            <div class="container">
+                <h1>
+                    @yield('title')
+                </h1>
+            </div>
+        </div>
         <main class="px-4 bg-transparent">
             @yield('content')
         </main>

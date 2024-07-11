@@ -1,10 +1,6 @@
 @extends('layouts.app-simple')
-
+@section('title', 'Електронний щоденник ХПФК')
 @section('content')
-    <h1 class="text-center">
-        Електронний щоденник ХПФК
-    </h1>
-
     <div class="text-center">
         <p class="fs-2">Тільки для авторизованих користувачів!</p>
         <p>

@@ -26,7 +26,13 @@
     <div id="app">
 
         @include('menus.mainmenu')
-
+        <div class="header">
+            <div class="container">
+                <h1>
+                    @yield('title')
+                </h1>
+            </div>
+        </div>
         <main class="container">
             @yield('content')
         </main>

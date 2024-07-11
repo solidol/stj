@@ -1,9 +1,8 @@
 @extends('layouts.app-nosidebar')
 
-
+@section('title', 'Користувачі')
 
 @section('content')
-    <h1>Користувачі журналу</h1>
     <div class="baloon">
         <table id="journal_users" class="table table-stripped">
             <thead>

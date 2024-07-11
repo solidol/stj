@@ -3,10 +3,7 @@
 @section('title', 'Мої пропуски')
 
 
-
-
 @section('content')
-    <h1>Мої пропуски</h1>
     <h2>
         {{ $data->title }}
     </h2>

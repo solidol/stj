@@ -26,7 +26,15 @@
     </div>
     <div id="app">
         @include('menus.mainmenu')
-        <div class="container" >
+
+        <div class="header">
+            <div class="container">
+                <h1>
+                    @yield('title')
+                </h1>
+            </div>
+        </div>
+        <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-5 col-sm-12">
                     <aside class="p-0">

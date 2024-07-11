@@ -1,9 +1,9 @@
 @extends('layouts.app-nosidebar')
 
+
+@section('title', 'Електронна база коледжу')
+
 @section('content')
-    <h1>Електронна база коледжу</h1>
-
-
     <div class="baloon">
         <nav aria-label="breadcrumb" class="m-3 d-md-block d-none breadcrumb-sm">
             <ol class="breadcrumb">

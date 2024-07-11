@@ -6,10 +6,6 @@
 
 
 @section('content')
-    <h1>
-        Мої викладачі
-    </h1>
-
 
     <div class="row">
         @foreach ($teachers as $teacher)
