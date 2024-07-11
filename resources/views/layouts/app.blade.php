@@ -21,33 +21,39 @@
 </head>
 
 <body>
-    @include('layouts.preloader')
-    <div class="hfill d-md-block d-none">
-    </div>
     <div id="app">
+        @include('layouts.preloader')
+        <div class="hfill d-md-block d-none">
+        </div>
+
         @include('menus.mainmenu')
 
-        <div class="header">
+        <header>
             <div class="container">
                 <h1>
                     @yield('title')
                 </h1>
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-5 col-sm-12">
-                    <aside class="p-0">
-                        @yield('sidebar')
-                    </aside>
-                </div>
-                <div class="col-lg-9 col-md-7 col-sm-12">
-                    <main class="p-0">
-                        @yield('content')
-                    </main>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-5 col-sm-12">
+                        <aside class="p-0">
+                            @yield('sidebar')
+                        </aside>
+                    </div>
+                    <div class="col-lg-9 col-md-7 col-sm-12">
+                        <div class="p-0">
+                            @yield('content')
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </main>
+
+        <footer>
+        </footer>
     </div>
 </body>
 

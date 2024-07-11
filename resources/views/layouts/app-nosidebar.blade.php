@@ -20,23 +20,29 @@
 </head>
 
 <body>
-    @include('layouts.preloader')
-    <div class="hfill d-md-block d-none">
-    </div>
     <div id="app">
+        @include('layouts.preloader')
+        <div class="hfill d-md-block d-none">
+        </div>
+
 
         @include('menus.mainmenu')
-        <div class="header">
+        <header class="header">
             <div class="container">
                 <h1>
                     @yield('title')
                 </h1>
             </div>
-        </div>
-        <main class="container">
-            @yield('content')
+        </header>
+        <main>
+            <div class="container">
+                @yield('content')
+            </div>
         </main>
 
+
+        <footer>
+        </footer>
     </div>
     @include('popups.popup-messages')
 </body>

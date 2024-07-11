@@ -28,4 +28,12 @@ class TeacherController extends Controller
             'group' => $group,
         ]);
     }
+
+    public function show(Teacher $teacher){
+        $group = Auth::user()->userable->group;
+        return view('teachers.show', [
+            'teacher' => $teacher,
+            'group' => $group,
+        ]);
+    }
 }

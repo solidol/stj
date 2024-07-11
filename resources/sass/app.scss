@@ -33,10 +33,19 @@
 
 body {
     padding-top: 1rem;
-    padding-bottom: 4rem;
+
     font-size: calc(90% + 0.2vw);
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(180deg,$dark,$cyan);
+
+}
+
+footer {
+    padding-bottom: 4rem;
+    background-color: $cyan;
+}
+
+main {
+    background: linear-gradient(180deg, $dark, $cyan);
 }
 
 .container {
@@ -44,7 +53,7 @@ body {
     padding-bottom: 0.3rem;
 }
 
-.header{
+header {
     background-color: $dark;
 }
 

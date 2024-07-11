@@ -17,11 +17,21 @@
                                 src="{{ config('app.api') }}/teachers/{{ $teacher->id }}/avatar">
                         </div>
                         <div class="col-12 col-md-8 p-2">
-                            <h2 class="text-center name-3">{{ $teacher->fullname }}</h2>
+                            <h2 class="text-center name-3">
+                                <a href="{{ URL::route('teachers.show', ['teacher' => $teacher]) }}">
+                                    {{ $teacher->fullname }}
+
+
+
+                                    <i class="bi bi-caret-right fs-3 text-danger"></i>
+
+                                </a>
+                            </h2>
 
                             @foreach ($teacher->journalsByGroup($group->kod_grup) as $journal)
                                 <div class="m-2">
-                                    <a class="btn btn-primary d-block" href="{{ route('journals.show', ['journal' => $journal]) }}">
+                                    <a class="btn btn-primary d-block"
+                                        href="{{ route('journals.show', ['journal' => $journal]) }}">
                                         {{ $journal->subject->subject_name }}
                                     </a>
 

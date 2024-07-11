@@ -1,12 +1,10 @@
 @extends('layouts.app-nosidebar')
 
-@section('title', 'Мої пропуски')
+@section('title', $data->title)
 
 
 @section('content')
-    <h2>
-        {{ $data->title }}
-    </h2>
+
     <div class="bg-light rounded-1 p-1">
         <nav class="nav row m-1">
             <div class="col-4 col-md-2 col-lg-1 p-1">

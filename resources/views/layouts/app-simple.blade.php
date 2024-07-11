@@ -21,10 +21,11 @@
 </head>
 
 <body>
-    @include('layouts.preloader')
-    <!--<div class="hfill d-md-block d-none">-->
-    </div>
     <div id="app">
+        @include('layouts.preloader')
+        <div class="hfill d-md-block d-none">
+        </div>
+
 
         <div class="header">
             <div class="container">
@@ -37,6 +38,9 @@
             @yield('content')
         </main>
 
+
+        <footer>
+        </footer>
     </div>
     @include('popups.popup-messages')
 </body>
