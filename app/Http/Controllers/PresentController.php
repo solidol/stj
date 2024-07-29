@@ -23,7 +23,7 @@ class PresentController extends Controller
         if (\request()->ajax()) {
             return response()->json(['status' => $present]);
         } else {
-            return redirect($request->getRequestUri());
+            return redirect()->back();//redirect($request->getRequestUri());
         }
     }
 }
