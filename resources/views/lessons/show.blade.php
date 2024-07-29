@@ -1,18 +1,10 @@
 @extends('layouts.app-nosidebar')
 
-@section('title', 'Пара')
-
-
+@section('title', $lesson->journal->subject->title . ' ' . $lesson->tema)
 
 
 @section('content')
     <div class="baloon">
-        <h1>
-            {{ $lesson->tema }}
-        </h1>
-        <div class="fs-2">
-            {{ $lesson->journal->subject->title }}
-        </div>
         <div class="fs-2">
             {{ $lesson->journal->teacher->fullname }}
         </div>
