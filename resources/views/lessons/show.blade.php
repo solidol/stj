@@ -29,7 +29,7 @@
                         Натисніть кнопку "Відмітитися", щоб зберегти дані про вашу присутність на парі.
                     </p>
                     <input type="hidden" name="lesson_id" value="{{ $lesson->kod_pari }}">
-                    <button type="submit" class="btn btn-primary">Відмітитися</button>
+                    <button type="submit" class="btn btn-primary fs-3"><i class="bi bi-calendar2-check"></i> Відмітитися</button>
                 </div>
             </form>
         @endif
