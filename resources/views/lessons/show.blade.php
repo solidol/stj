@@ -5,12 +5,13 @@
 
 @section('content')
     <div class="baloon">
-        <div class="fs-2">
+        <h2>
             {{ $lesson->tema }}
-        </div>
-        <div class="fs-2">
+        </h2>
+        <hr>
+        <h2>
             {{ $lesson->journal->teacher->fullname }}
-        </div>
+        </h2>
         @if ($lesson->isPresent(Auth::user()->userable))
             <div class="fs-3 my-2 p-2 border border-2 border-danger rounded-2">
                 <p class="fs-2 text-danger text-center">
