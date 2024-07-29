@@ -3,8 +3,6 @@
 @section('title', 'Мої викладачі')
 
 
-
-
 @section('content')
 
     <div class="row">
