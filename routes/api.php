@@ -20,6 +20,8 @@ use App\Http\Controllers\CheckerController;
 |
 */
 
+Route::get('/lessons/{lesson}/ckeckin-link', [LessonController::class, 'checkinLink'])->name('lessons.nowlink.ajax');
+
 
 
 
