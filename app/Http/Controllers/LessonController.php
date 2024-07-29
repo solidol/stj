@@ -63,7 +63,7 @@ class LessonController extends Controller
                     'checked' => $lesson->isPresent($user->userable)
                 ]);
             } else
-                return view('student.lessons.show', ['lesson' => $lesson]);
+                return view('lessons.show', ['lesson' => $lesson]);
         } else {
             return view('noelement');
         }
