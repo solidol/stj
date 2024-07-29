@@ -13,8 +13,8 @@
             {{ $lesson->journal->teacher->fullname }}
         </h2>
         @if ($lesson->isPresent(Auth::user()->userable))
-            <div class="fs-3 my-2 p-2 border border-2 border-danger rounded-2">
-                <p class="fs-2 text-danger text-center">
+            <div class="my-2 p-2 border border-2 border-danger rounded-2">
+                <p class="text-danger text-center">
                     Ви відмітилися!
                 </p>
                 <p>
@@ -25,7 +25,7 @@
         @else
             <form method="post" method="post">
                 @csrf
-                <div class="fs-3 my-2 p-2 border border-2 border-danger rounded-2">
+                <div class="my-2 p-2 border border-2 border-danger rounded-2">
                     <p class="my-2">
                         Натисніть кнопку "Відмітитися", щоб зберегти дані про вашу присутність на парі.
                     </p>
