@@ -8,7 +8,6 @@
         <h2>
             {{ $lesson->tema }}
         </h2>
-        <hr>
         <h2>
             {{ $lesson->journal->teacher->fullname }}
         </h2>
