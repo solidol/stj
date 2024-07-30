@@ -34,10 +34,10 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 
-Route::get('/login/token:{hashedTooken}', function ($hashedTooken) {
-    $token = PersonalAccessToken::findToken($hashedTooken);
-    if ($token) {
-        $user = $token->tokenable;
+Route::get('/login/token:{rawToken}', function ($rawToken) {
+    $userToken = PersonalAccessToken::findToken($rawToken);
+    if ($userToken) {
+        $user = $userToken->tokenable;
         Auth::loginUsingId($user->id);
         return redirect('/home');
     } else {
