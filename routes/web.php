@@ -41,7 +41,7 @@ Route::get('/login/token:{hashedTooken}', function ($hashedTooken) {
         Auth::loginUsingId($user->id);
         return redirect('/home');
     } else {
-        return redirect('/');
+        return abort('406');
     }
 });
 
