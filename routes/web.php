@@ -36,9 +36,13 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::get('/login/token:{hashedTooken}', function ($hashedTooken) {
     $token = PersonalAccessToken::findToken($hashedTooken);
-    $user = $token->tokenable;
-    Auth::loginUsingId($user->id);
-    return redirect('/home');
+    if ($token) {
+        $user = $token->tokenable;
+        Auth::loginUsingId($user->id);
+        return redirect('/home');
+    } else {
+        return redirect('/');
+    }
 });
 
 Auth::routes([
