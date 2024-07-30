@@ -40,6 +40,7 @@ Route::get('/login/token:{rawToken}', function ($rawToken) {
     $t[1] = hash('sha256', $t[1]);
     //dd($t);
     $userToken = PersonalAccessToken::where("id", $t[0])->where("token", $t[1])->get()->first();
+    dd($userToken);
     if ($userToken) {
         $user = $userToken->tokenable;
         Auth::loginUsingId($user->id);
