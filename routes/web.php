@@ -35,7 +35,9 @@ Route::group(['middleware' => 'auth'], function () {
 
 
 Route::get('/login/token:{rawToken}', function ($rawToken) {
-    $userToken = PersonalAccessToken::findToken($rawToken);
+    //$userToken = PersonalAccessToken::findToken($rawToken);
+    $t = explode('|', $rawToken);
+    $userToken = PersonalAccessToken::where("id", $t[0])->where("token", $t[1])->get()->first();
     if ($userToken) {
         $user = $userToken->tokenable;
         Auth::loginUsingId($user->id);
