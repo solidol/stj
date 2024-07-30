@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Laravel\Sanctum\PersonalAccessToken;
-
+use DB;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,7 +39,7 @@ Route::get('/login/token:{rawToken}', function ($rawToken) {
     $t = explode('|', $rawToken);
     $t[1] = hash('sha256', $t[1]);
     //dd($t);
-    $userToken = PersonalAccessToken::where("id", $t[0])->where("token", $t[1])->get();
+    $userToken = DB::table('personal_access_tokens')->where("id", $t[0])->where("token", $t[1])->get();
     dd($userToken);
     if ($userToken) {
         $user = $userToken->tokenable;
