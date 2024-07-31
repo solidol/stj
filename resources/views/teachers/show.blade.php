@@ -19,7 +19,7 @@
                             value="{{ $teacher->user->email }}" readonly>
                     </div>
                     <div class="col-3 col-form-label text-danger">
-                        <a href="mailto://{{$teacher->user->telegram_id}}" class="btn btn-primary">Написати</a>
+                        <a href="mailto:{{$teacher->user->telegram_id}}" class="btn btn-primary">Написати</a>
                     </div>
                 </div>
                 @if ($teacher->user->skype_id)
