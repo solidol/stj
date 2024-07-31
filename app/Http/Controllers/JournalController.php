@@ -19,14 +19,7 @@ class JournalController extends Controller
     function index()
     {
         $user = Auth::user();
-        $journals = $user->userable->group->journals;
-        /*
-        $messages = Message::where('to_id', 0)
-            ->where('message_type', 'text')
-            ->whereDate('datetime_end', '>', (new DateTime())->format('Y-m-d h:m:s'))
-            ->whereDate('datetime_start', '<', (new DateTime())->format('Y-m-d h:m:s'))
-            ->get();
-*/
+        $journals = $user->userable->group->journalss();
         $messages = [];
         return view('journals.index', [
             'journals' => $journals,
