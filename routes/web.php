@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use Laravel\Sanctum\PersonalAccessToken;
-use DB;
 
 /*
 |--------------------------------------------------------------------------
