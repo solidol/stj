@@ -18,24 +18,23 @@
                         <input type="email" class="form-control" name="email" id="email"
                             value="{{ $teacher->user->email }}" readonly>
                     </div>
+                    <div class="col-3 col-form-label text-danger">
+                        <a href="mailto://{{$teacher->user->telegram_id}}" class="btn btn-primary">Написати</a>
+                    </div>
                 </div>
+                @if ($teacher->user->skype_id)
                 <div class="form-group row mb-2">
                     <label for="skype" class="col-3 col-form-label text-md-right">Skype</label>
                     <div class="col-6">
                         <input type="text" class="form-control" name="skype" id="skype"
                             value="{{ $teacher->user->skype_id }}" readonly>
                     </div>
-                </div>
-                <div class="form-group row mb-2">
-                    <label for="viber" class="col-3 col-form-label text-md-right">Viber</label>
-                    <div class="col-6">
-                        <input type="text" class="form-control" name="viber" id="viber"
-                            value="{{ $teacher->user->viber_id }}" readonly>
-                    </div>
                     <div class="col-3 col-form-label text-danger">
-
+                        <a href="skype:{{$teacher->user->telegram_id}}?chat" class="btn btn-primary">Написати</a>
                     </div>
                 </div>
+                @endif
+                @if ($teacher->user->telegram_id)
                 <div class="form-group row mb-2">
                     <label for="skype" class="col-3 col-form-label text-md-right">Telegram</label>
                     <div class="col-6">
@@ -43,9 +42,10 @@
                             value="{{ $teacher->user->telegram_id }}" readonly>
                     </div>
                     <div class="col-3 col-form-label text-danger">
-
+<a href="https://t.me/{{$teacher->user->telegram_id}}" class="btn btn-primary">Написати</a>
                     </div>
                 </div>
+                @endif
                 @foreach ($teacher->journalsByGroup($group->kod_grup) as $journal)
                     <div class="m-2">
                         <a class="btn btn-primary d-block" href="{{ route('journals.show', ['journal' => $journal]) }}">
