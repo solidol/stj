@@ -9,9 +9,10 @@ $(window).on('load', function () {
 });
 
 $('a').on('click', function () {
+    $('body').removeClass('loaded');
     $('body').addClass('loaded_hiding');
     href = $(this).attr('href');
     window.setTimeout(function () {
-        location.href = href;
+        //location.href = href;
     }, 200);
 });
