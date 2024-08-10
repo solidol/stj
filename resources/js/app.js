@@ -8,7 +8,7 @@ $(window).on('load', function () {
     }, 800);
 });
 
-$('a').click(function(){
+$('a').on('click',function(){
     $('body').addClass('loaded_hiding');
     location.href=$(this).attr('href');
 });
