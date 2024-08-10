@@ -7,3 +7,8 @@ $(window).on('load', function () {
         $('body').removeClass('loaded_hiding');
     }, 800);
 });
+
+$('a').click(function(){
+    $('body').addClass('loaded_hiding');
+    location.href=$(this).attr('href');
+});
