@@ -10,7 +10,8 @@ $(window).on('load', function () {
 
 $('a').on('click', function () {
     $('body').addClass('loaded_hiding');
+    href = $(this).attr('href');
     window.setTimeout(function () {
-        location.href = $(this).attr('href');
+        location.href = href;
     }, 200);
 });
