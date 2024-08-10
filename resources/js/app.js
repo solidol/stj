@@ -1,6 +1,7 @@
 import './bootstrap';
 
 $(window).on('load', function () {
+    
     $('body').addClass('loaded_hiding');
     window.setTimeout(function () {
         $('body').addClass('loaded');
@@ -8,11 +9,10 @@ $(window).on('load', function () {
     }, 800);
 });
 
-$('a').on('click', function () {
-    $('body').removeClass('loaded');
+$('a').on('click', function (event) {
+    event.preventDefault();
     $('body').addClass('loaded_hiding');
-    href = $(this).attr('href');
-    window.setTimeout(function () {
-        //location.href = href;
-    }, 200);
+    $('body').removeClass('loaded');
+    window.location.href = $(this).attr('href');
+
 });
