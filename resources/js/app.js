@@ -9,6 +9,7 @@ $(window).on('load', function () {
 });
 
 $('a').on('click',function(){
+    console.log('click');
     $('body').addClass('loaded_hiding');
     location.href=$(this).attr('href');
 });
