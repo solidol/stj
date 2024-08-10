@@ -8,8 +8,9 @@ $(window).on('load', function () {
     }, 800);
 });
 
-$('a').on('click',function(){
-    console.log('click');
+$('a').on('click', function () {
     $('body').addClass('loaded_hiding');
-    location.href=$(this).attr('href');
+    window.setTimeout(function () {
+        location.href = $(this).attr('href');
+    }, 200);
 });
