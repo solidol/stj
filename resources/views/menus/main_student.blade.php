@@ -122,7 +122,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('shedules.show') }}">
-                        <i class="bi bi-table"></i>
+                        <i class="bi bi-table fs-3"></i>
                     </a>
                 </li>
                 <li class="nav-item ">
