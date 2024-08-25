@@ -16,18 +16,14 @@
                 <div class="col-12 col-md-6 text-center">
                     <p class="fs-2">Вітаємо, {{ Auth::user()->userable->fullname }}!</p>
 
-                    <p>
-                        <a class="btn btn-primary fs-4" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        <button type="submit" class="btn btn-primary fs-4">
                             <i class="bi bi-box-arrow-right"></i> Вихід
-                        </a>
-                    </p>
+                        </button>
+                        @csrf
+                    </form>
                 </div>
             </div>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
         @endif
     </div>
 @endsection
