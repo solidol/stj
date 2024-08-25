@@ -43,7 +43,7 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle no-prevent" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <i class="bi bi-person-bounding-box"></i> {{ Auth::user()->userable->shortname }} <span
                             class="caret"></span>
@@ -60,7 +60,7 @@
                             <hr class="dropdown-divider">
                         </li>
                         <li>
-                            <a class="dropdown-item loguot" href="{{ route('logout') }}"
+                            <a class="dropdown-item no-prevent" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
                                 <i class="bi bi-box-arrow-right"></i> Вихід
