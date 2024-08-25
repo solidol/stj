@@ -39,7 +39,7 @@
                         </thead>
                         <tbody>
                             @for ($p = 1; $p <= 8; $p++)
-                                @foreach ($student->shedules() as $shedule)
+                                @foreach ($student->shedules as $shedule)
                                     @if ($shedule->day_of_week == $d && $shedule->lesson_number == $p)
                                         <tr>
                                             <td>

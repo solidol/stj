@@ -13,7 +13,6 @@ class SheduleController extends Controller
     {
         $user = Auth::user();
         if ($user->isStudent()) {
-            dd($user->userable->shedules);
             return view('shedules.show', ['student' => $user->userable]);
         }
 
