@@ -42,13 +42,13 @@
                     </a>
                 </li>
 
-                <li class="nav-item dropdown bg-light">
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <i class="bi bi-person-bounding-box"></i> {{ Auth::user()->userable->shortname }} <span
                             class="caret"></span>
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu bg-light">
                         <li>
                             <a class="dropdown-item" href="{{ route('users.profile.my') }}">
                                 <i class="bi bi-person-lines-fill"></i>
