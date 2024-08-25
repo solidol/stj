@@ -1,4 +1,4 @@
-@extends('layouts.app-nosidebar')
+@extends('layouts.app')
 
 @section('content')
     <h1>Мій профіль</h1>

@@ -1,4 +1,4 @@
-@extends('layouts.app-nosidebar')
+@extends('layouts.app')
 @section('title', $teacher->fullname)
 @section('content')
     <div class="baloon">
