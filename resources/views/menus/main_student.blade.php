@@ -35,6 +35,13 @@
                 </li>
 
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('shedules.show') }}">
+                        <i class="bi bi-table"></i>
+                        <span class="ms-1 d-none d-xl-inline">Мій розклад</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
                     <a class="nav-link" href="{{ route('mdb.index') }}">
                         <i class="bi bi-database"></i>
                         <span class="ms-1 d-none d-xl-inline">Методична база

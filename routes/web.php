@@ -29,8 +29,8 @@ Route::group(['middleware' => 'auth'], function () {
     require_once __DIR__ . '/web_parts/events.php';
     require_once __DIR__ . '/web_parts/users.php';
     require_once __DIR__ . '/web_parts/mdb.php';
-
     require_once __DIR__ . '/web_parts/controls.php';
+    require_once __DIR__ . '/web_parts/shedules.php';
 });
 
 
