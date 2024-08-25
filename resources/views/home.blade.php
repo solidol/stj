@@ -16,7 +16,7 @@
                 <div class="col-12 col-md-6 text-center">
                     <p class="fs-2">Вітаємо, {{ Auth::user()->userable->fullname }}!</p>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
                         <button type="submit" class="btn btn-primary fs-4">
                             <i class="bi bi-box-arrow-right"></i> Вихід
                         </button>
