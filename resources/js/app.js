@@ -9,7 +9,7 @@ $(window).on('load', function () {
     }, 800);
 });
 
-$('a').on('click', function (event) {
+$('a:not(.dropdown-toggle)').on('click', function (event) {
     event.preventDefault();
     $('body').addClass('loaded_hiding');
     $('body').removeClass('loaded');
