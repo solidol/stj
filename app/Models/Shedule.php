@@ -12,7 +12,7 @@ class Shedule extends Model
 
     public function teacher()
     {
-        return $this->belongsTo(Teacher::class, 'kod_prep');
+        return $this->belongsTo(Teacher::class, 'teacher_id');
     }
 
     public function group()
