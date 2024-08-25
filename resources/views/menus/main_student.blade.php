@@ -33,14 +33,14 @@
                         <span class="ms-1 d-none d-xl-inline">Мої пропуски</span>
                     </a>
                 </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('shedules.show') }}">
-                        <i class="bi bi-table"></i>
-                        <span class="ms-1 d-none d-xl-inline">Мій розклад</span>
-                    </a>
-                </li>
-
+                @if (Auth::user()->userable->group->title == '451')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('shedules.show') }}">
+                            <i class="bi bi-table"></i>
+                            <span class="ms-1 d-none d-xl-inline">Мій розклад</span>
+                        </a>
+                    </li>
+                @endif
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('mdb.index') }}">
                         <i class="bi bi-database"></i>
@@ -120,11 +120,13 @@
                         <i class="bi bi-database fs-3"></i>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('shedules.show') }}">
-                        <i class="bi bi-table fs-3"></i>
-                    </a>
-                </li>
+                @if (Auth::user()->userable->group->title == '451')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('shedules.show') }}">
+                            <i class="bi bi-table fs-3"></i>
+                        </a>
+                    </li>
+                @endif
                 <li class="nav-item ">
                     <a class="nav-link" href="{{ route('users.profile.my') }}">
                         <i class="bi bi-person fs-3"></i>
