@@ -50,8 +50,8 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle no-prevent" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link dropdown-toggle no-prevent" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-person-bounding-box"></i> {{ Auth::user()->userable->shortname }} <span
                             class="caret"></span>
                     </a>
@@ -73,7 +73,8 @@
                                 <i class="bi bi-box-arrow-right"></i> Вихід
                             </a>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                style="display: none;">
                                 @csrf
                             </form>
                         </li>
@@ -119,7 +120,11 @@
                         <i class="bi bi-database fs-3"></i>
                     </a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('shedules.show') }}">
+                        <i class="bi bi-table"></i>
+                    </a>
+                </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="{{ route('users.profile.my') }}">
                         <i class="bi bi-person fs-3"></i>
