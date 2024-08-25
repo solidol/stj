@@ -13,9 +13,9 @@
                 $dw = 7;
             }
             ?>
-            <div class="col-xl-3 col-md-6 col-sm-12 {{ $dw == $d ? 'bg-light ' : '' }}">
+            <div class="col-xl-3 col-md-6 col-sm-12">
 
-                <div class="baloon">
+                <div class="baloon {{ $dw == $d ? 'border border-danger' : '' }}">
                     <h2 class="fs-2">
                         {{ App\Library\CalendarHelper::$daysofweek[$d] }}
                     </h2>
