@@ -11,7 +11,6 @@
     <title>{{ config('app.name', 'Laravel') }} - @yield('title')</title>
 
 
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -26,9 +25,9 @@
         <div class="hfill d-md-block d-none">
         </div>
 
-        @include('menus.mainmenu')
 
-        <header>
+        @include('menus.mainmenu')
+        <header class="header">
             <div class="container">
                 <h1>
                     @yield('title')
@@ -37,24 +36,15 @@
         </header>
         <main>
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-5 col-sm-12">
-                        <aside class="p-0">
-                            @yield('sidebar')
-                        </aside>
-                    </div>
-                    <div class="col-lg-9 col-md-7 col-sm-12">
-                        <div class="p-0">
-                            @yield('content')
-                        </div>
-                    </div>
-                </div>
+                @yield('content')
             </div>
         </main>
+
 
         <footer>
         </footer>
     </div>
+    @include('popups.popup-messages')
 </body>
 
 </html>
