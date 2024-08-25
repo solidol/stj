@@ -42,7 +42,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item dropdown bg-loght">
+                <li class="nav-item dropdown bg-light">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <i class="bi bi-person-bounding-box"></i> {{ Auth::user()->userable->shortname }} <span
