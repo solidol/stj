@@ -12,11 +12,13 @@ class SheduleController extends Controller
     public function show()
     {
         $user = Auth::user();
-        if ($user->isStudent()) {
-            return view('shedules.show', ['student' => $user->userable]);
-        }
 
-        return view('noelement');
+        if ($user->isStudent()) {
+            if ($user->userable->group->title == "451") {
+                return view('shedules.show', ['student' => $user->userable]);
+            }
+        }
+        return abort('403');
 
     }
 }
