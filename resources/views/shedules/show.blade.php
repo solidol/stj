@@ -1,7 +1,7 @@
-@extends('layouts.app-nosidebar')
-
+@extends('layouts.app')
+@section('title', "Розклад (гр. {$student->group->title})")
 @section('content')
-    <h1>Розклад (гр. {{ $student->group->title }})</h1>
+
 
 
     <div class="row">
