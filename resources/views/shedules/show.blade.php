@@ -13,7 +13,7 @@
                 $dw = 7;
             }
             ?>
-            <div class="col-xl-3 col-md-6 col-sm-12 ">
+            <div class="col-xl-3 col-md-6 col-sm-12 my-2">
 
                 <div class="rounded-1 bg-light {{ $dw == $d ? 'border border-3 border-danger' : '' }}" style="height:100%">
                     <h2 class="fs-2">
