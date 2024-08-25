@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-nosidebar')
 @section('title', 'Помилка 406')
 @section('content')
 <div class="container">

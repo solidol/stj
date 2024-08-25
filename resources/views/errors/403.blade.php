@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-nosidebar')
 @section('title', 'Помилка 403')
 @section('content')
 <div class="container">
