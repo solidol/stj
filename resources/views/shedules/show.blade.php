@@ -19,7 +19,7 @@
                     <h2 class="fs-2">
                         {{ App\Library\CalendarHelper::$daysofweek[$d] }}
                     </h2>
-                    <table class="table table-bordered">
+                    <table class="table table-striped">
 
                         <thead>
                             <tr>
