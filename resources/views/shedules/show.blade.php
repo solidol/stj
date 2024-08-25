@@ -43,13 +43,15 @@
                                                 {{ $shedule->lesson_number }}
                                             </td>
                                             <td>
-                                                <p>
+                                                <div>
                                                     @if ($shedule->teacher2_id == Auth::user()->userable->id)
                                                         <i class="bi bi-vr fs-5"></i>
                                                     @endif
                                                     {{ $shedule->subject->title }}
-                                                </p>
-                                                <p>{{ $shedule->teacher->shortname }}</p>
+                                                </div>
+                                                <div>
+                                                    {{ $shedule->teacher->shortname }}
+                                                </div>
                                             </td>
                                             <td nowrap>
                                                 {{ $shedule->wt }}
