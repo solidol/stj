@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.app-simple')
 @section('title', 'Помилка 404')
 @section('content')
-<div class="container">111
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card">
