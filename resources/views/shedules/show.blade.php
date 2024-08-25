@@ -15,7 +15,7 @@
             ?>
             <div class="col-xl-3 col-md-6 col-sm-12 {{ $dw == $d ? 'bg-light ' : '' }}">
 
-                <div class="m-2">
+                <div class="p-2">
                     <h2 class="fs-2 text-white">
                         {{ App\Library\CalendarHelper::$daysofweek[$d] }}
                     </h2>
