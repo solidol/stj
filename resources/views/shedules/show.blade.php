@@ -1,7 +1,7 @@
 @extends('layouts.app-nosidebar')
 
 @section('content')
-    <h1>Мій розклад</h1>
+    <h1>Розклад (гр. {{ $student->group->title }})</h1>
 
 
     <div class="row">
@@ -24,9 +24,6 @@
                         <thead>
                             <tr>
                                 <th>
-                                    Група
-                                </th>
-                                <th>
                                     Пара
                                 </th>
                                 <th>
@@ -42,9 +39,6 @@
                                 @foreach ($student->shedules as $shedule)
                                     @if ($shedule->day_of_week == $d && $shedule->lesson_number == $p)
                                         <tr>
-                                            <td>
-                                                {{ $shedule->group->title }}
-                                            </td>
                                             <td>
                                                 {{ $shedule->lesson_number }}
                                             </td>
