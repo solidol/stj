@@ -62,7 +62,7 @@ class LessonController extends Controller
                 if (\request()->ajax()) {
                     return response()->json(['message' => 'Доступ заборонено!', 'status' => 'denided'], 403);
                 } else {
-                    return abort(403);
+                    return view('errors.nocheckin');
                 }
             }
 
