@@ -14,9 +14,9 @@ class SheduleController extends Controller
         $user = Auth::user();
 
         if ($user->isStudent()) {
-            if ($user->userable->group->title == "451") {
-                return view('shedules.show', ['student' => $user->userable]);
-            }
+
+            return view('shedules.show', ['student' => $user->userable]);
+
         }
         return abort('403');
 
