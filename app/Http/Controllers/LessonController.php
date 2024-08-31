@@ -49,23 +49,33 @@ class LessonController extends Controller
     {
         if (!$request->hasValidSignature()) {
             if (\request()->ajax())
-                response()->json(['message' => 'Посилання не дійсне!', 'status' => 'expired'], 406);
+                return response()->json(['message' => 'Посилання не дійсне!', 'status' => 'expired'], 406);
             else
-                abort(406);
+                return abort(406);
         }
         $user = Auth::user();
         $lesson->journal->teacher;
         $lesson->journal->subject;
+
         if ($user->isStudent()) {
+            if ($user->userable->group->id != $lesson->journal->group->id) {
+                if (\request()->ajax()) {
+                    return response()->json(['message' => 'Доступ заборонено!', 'status' => 'denided'], 403);
+                } else {
+                    return abort(403);
+                }
+            }
+
             if (\request()->ajax()) {
                 return response()->json([
                     'lesson' => $lesson,
                     'checked' => $lesson->isPresent($user->userable)
                 ]);
-            } else
+            } else {
                 return view('lessons.show', ['lesson' => $lesson]);
+            }
         } else {
-            return view('noelement');
+            return abort(404);
         }
     }
 
