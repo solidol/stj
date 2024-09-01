@@ -48,10 +48,11 @@ class LessonController extends Controller
     function now(Request $request, Lesson $lesson)
     {
         if (!$request->hasValidSignature()) {
-            if (\request()->ajax())
+            if (\request()->ajax()) {
                 return response()->json(['message' => 'Посилання не дійсне!', 'status' => 'expired'], 406);
-            else
+            } else {
                 return abort(406);
+            }
         }
         $user = Auth::user();
         $lesson->journal->teacher;
