@@ -56,8 +56,18 @@ class LoginController extends Controller
             'password' => $request->password
         ];
         if (Auth::attempt($credentials)) {
-            Log::login();
-            return redirect()->intended();
+
+            if (Auth::user()->userable) {
+                Log::login();
+                return redirect()->intended();
+            } else {
+                Auth::logout();
+                return redirect()->back()
+                    ->withInput()
+                    ->withErrors([
+                        'login' => 'Ваш обліковий запис недійсний!'
+                    ]);
+            }
 
         }
         return redirect()->back()
